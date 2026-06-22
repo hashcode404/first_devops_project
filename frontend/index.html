@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps Demo</title>
+</head>
+<body>
+
+<h1>Frontend Running</h1>
+
+<button onclick="checkBackend()">
+    Check Backend
+</button>
+
+<pre id="output"></pre>
+
+<script>
+
+async function checkBackend() {
+
+    const response =
+      await fetch('http://localhost:5000');
+
+    const data = await response.json();
+
+    document.getElementById('output')
+      .innerText = JSON.stringify(data, null, 2);
+}
+
+</script>
+
+</body>
+</html>
