@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>DevOps Demo</title>
 </head>
-<body>
 
-<h1>Frontend Running : 1</h1>
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh;">
 
-<button onclick="checkBackend()">
+    <h1>Frontend Running</h1>
+    <h3>V1.0.3</h3>
+
+
+    <!-- <button onclick="checkBackend()">
     Check Backend
-</button>
+</button> -->
 
-<pre id="output"></pre>
+    <pre id="output"></pre>
 
-<script>
+    <script>
 
-async function checkBackend() {
+        async function checkBackend() {
 
-    const response =
-      await fetch('http://localhost:5000');
+            const response =
+                await fetch('http://localhost:5000');
 
-    const data = await response.json();
+            const data = await response.json();
 
-    document.getElementById('output')
-      .innerText = JSON.stringify(data, null, 2);
-}
+            document.getElementById('output')
+                .innerText = JSON.stringify(data, null, 2);
+        }
 
-</script>
+    </script>
 
 </body>
+
 </html>
